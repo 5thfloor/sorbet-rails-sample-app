@@ -25,6 +25,42 @@ end
 module ActiveRecord::InternalMetadata::InstanceMethods
   extend T::Sig
 
+  sig { returns(DateTime) }
+  def created_at(); end
+
+  sig { params(value: DateTime).void }
+  def created_at=(value); end
+
+  sig { params(args: T.untyped).returns(T::Boolean) }
+  def created_at?(*args); end
+
+  sig { returns(String) }
+  def key(); end
+
+  sig { params(value: String).void }
+  def key=(value); end
+
+  sig { params(args: T.untyped).returns(T::Boolean) }
+  def key?(*args); end
+
+  sig { returns(DateTime) }
+  def updated_at(); end
+
+  sig { params(value: DateTime).void }
+  def updated_at=(value); end
+
+  sig { params(args: T.untyped).returns(T::Boolean) }
+  def updated_at?(*args); end
+
+  sig { returns(T.nilable(String)) }
+  def value(); end
+
+  sig { params(value: T.nilable(String)).void }
+  def value=(value); end
+
+  sig { params(args: T.untyped).returns(T::Boolean) }
+  def value?(*args); end
+
 end
 
 class ActiveRecord::InternalMetadata

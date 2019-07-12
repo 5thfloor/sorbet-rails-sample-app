@@ -25,6 +25,15 @@ end
 module ActiveRecord::SchemaMigration::InstanceMethods
   extend T::Sig
 
+  sig { returns(String) }
+  def version(); end
+
+  sig { params(value: String).void }
+  def version=(value); end
+
+  sig { params(args: T.untyped).returns(T::Boolean) }
+  def version?(*args); end
+
 end
 
 class ActiveRecord::SchemaMigration
