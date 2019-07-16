@@ -1417,6 +1417,28 @@ class ActionDispatch::Routing::RouteSet::Generator
   def use_recall_for(key); end
   def use_relative_controller!; end
 end
+class ActionController::MissingRenderer < LoadError
+  def initialize(format); end
+end
+module ActionController::Renderers
+  def _render_to_body_with_renderer(options); end
+  def _render_with_renderer_js(js, options); end
+  def _render_with_renderer_json(json, options); end
+  def _render_with_renderer_xml(xml, options); end
+  def render_to_body(options); end
+  def self._render_with_renderer_method_name(key); end
+  def self.add(key, &block); end
+  def self.remove(key); end
+  extend ActiveSupport::Concern
+end
+module ActionController::Renderers::All
+  extend ActiveSupport::Concern
+  include ActionController::Renderers
+end
+module ActionController::Renderers::ClassMethods
+  def use_renderer(*args); end
+  def use_renderers(*args); end
+end
 class ActionDispatch::Request::Utils
   def perform_deep_munge; end
   def perform_deep_munge=(obj); end
@@ -2312,28 +2334,6 @@ module ActionController::Rendering::ClassMethods
   def renderer; end
   def setup_renderer!; end
 end
-class ActionController::MissingRenderer < LoadError
-  def initialize(format); end
-end
-module ActionController::Renderers
-  def _render_to_body_with_renderer(options); end
-  def _render_with_renderer_js(js, options); end
-  def _render_with_renderer_json(json, options); end
-  def _render_with_renderer_xml(xml, options); end
-  def render_to_body(options); end
-  def self._render_with_renderer_method_name(key); end
-  def self.add(key, &block); end
-  def self.remove(key); end
-  extend ActiveSupport::Concern
-end
-module ActionController::Renderers::All
-  extend ActiveSupport::Concern
-  include ActionController::Renderers
-end
-module ActionController::Renderers::ClassMethods
-  def use_renderer(*args); end
-  def use_renderers(*args); end
-end
 module ActionController::Head
   def head(status, options = nil); end
   def include_content?(status); end
@@ -2743,6 +2743,9 @@ class ActionController::API < ActionController::Metal
   def _renderers=(val); end
   def _renderers?; end
   def _run_process_action_callbacks(&block); end
+  def _serialization_scope; end
+  def _serialization_scope=(val); end
+  def _serialization_scope?; end
   def _view_paths; end
   def _view_paths=(val); end
   def _view_paths?; end
@@ -2763,6 +2766,7 @@ class ActionController::API < ActionController::Metal
   def include_all_helpers?; end
   def logger; end
   def logger=(value); end
+  def namespace_for_serializer=(arg0); end
   def rescue_handlers; end
   def rescue_handlers=(val); end
   def rescue_handlers?; end
@@ -2780,6 +2784,9 @@ class ActionController::API < ActionController::Metal
   def self._renderers; end
   def self._renderers=(val); end
   def self._renderers?; end
+  def self._serialization_scope; end
+  def self._serialization_scope=(val); end
+  def self._serialization_scope?; end
   def self._view_paths; end
   def self._view_paths=(val); end
   def self._view_paths?; end
@@ -2816,6 +2823,7 @@ class ActionController::API < ActionController::Metal
   extend ActionController::Railties::Helpers
   extend ActionController::Renderers::ClassMethods
   extend ActionController::Rendering::ClassMethods
+  extend ActionController::Serialization::ClassMethods
   extend ActionView::Rendering::ClassMethods
   extend ActionView::ViewPaths::ClassMethods
   extend ActiveRecord::Railties::ControllerRuntime::ClassMethods
@@ -2841,10 +2849,12 @@ class ActionController::API < ActionController::Metal
   include ActionController::ParamsWrapper
   include ActionController::Redirecting
   include ActionController::Renderers
+  include ActionController::Renderers
   include ActionController::Renderers::All
   include ActionController::Rendering
   include ActionController::Rendering
   include ActionController::Rescue
+  include ActionController::Serialization
   include ActionController::StrongParameters
   include ActionController::UrlFor
   include ActionController::UrlFor
@@ -2887,6 +2897,9 @@ class ActionController::Base < ActionController::Metal
   def _renderers=(val); end
   def _renderers?; end
   def _run_process_action_callbacks(&block); end
+  def _serialization_scope; end
+  def _serialization_scope=(val); end
+  def _serialization_scope?; end
   def _view_cache_dependencies; end
   def _view_cache_dependencies=(val); end
   def _view_cache_dependencies?; end
@@ -2940,6 +2953,7 @@ class ActionController::Base < ActionController::Metal
   def log_warning_on_csrf_failure=(value); end
   def logger; end
   def logger=(value); end
+  def namespace_for_serializer=(arg0); end
   def notice; end
   def per_form_csrf_tokens; end
   def per_form_csrf_tokens=(value); end
@@ -2978,6 +2992,9 @@ class ActionController::Base < ActionController::Metal
   def self._renderers; end
   def self._renderers=(val); end
   def self._renderers?; end
+  def self._serialization_scope; end
+  def self._serialization_scope=(val); end
+  def self._serialization_scope?; end
   def self._view_cache_dependencies; end
   def self._view_cache_dependencies=(val); end
   def self._view_cache_dependencies?; end
@@ -3067,6 +3084,7 @@ class ActionController::Base < ActionController::Metal
   extend ActionController::Renderers::ClassMethods
   extend ActionController::Rendering::ClassMethods
   extend ActionController::RequestForgeryProtection::ClassMethods
+  extend ActionController::Serialization::ClassMethods
   extend ActionView::Layouts::ClassMethods
   extend ActionView::Rendering::ClassMethods
   extend ActionView::ViewPaths::ClassMethods
@@ -3113,11 +3131,13 @@ class ActionController::Base < ActionController::Metal
   include ActionController::ParamsWrapper
   include ActionController::Redirecting
   include ActionController::Renderers
+  include ActionController::Renderers
   include ActionController::Renderers::All
   include ActionController::Rendering
   include ActionController::Rendering
   include ActionController::RequestForgeryProtection
   include ActionController::Rescue
+  include ActionController::Serialization
   include ActionController::Streaming
   include ActionController::StrongParameters
   include ActionController::UrlFor

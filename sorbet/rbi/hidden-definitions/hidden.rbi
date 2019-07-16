@@ -748,6 +748,14 @@ module ActionController::Rescue
   extend ::T::Sig
 end
 
+module ActionController::Serialization::ClassMethods
+  extend ::T::Sig
+end
+
+module ActionController::Serialization
+  extend ::T::Sig
+end
+
 class ActionController::SessionOverflowError
   DEFAULT_MESSAGE = ::T.let(nil, ::T.untyped)
 end
@@ -2583,6 +2591,222 @@ module ActiveModel::Serialization
   extend ::T::Sig
 end
 
+class ActiveModel::Serializer
+  REFLECTION_OPTIONS = ::T.let(nil, ::T.untyped)
+  SERIALIZABLE_HASH_VALID_KEYS = ::T.let(nil, ::T.untyped)
+  VERSION = ::T.let(nil, ::T.untyped)
+end
+
+module ActiveModel::Serializer::Adapter
+end
+
+class ActiveModel::Serializer::Adapter::Attributes
+  def initialize(serializer, options=T.unsafe(nil)); end
+end
+
+class ActiveModel::Serializer::Adapter::Attributes
+  def self._deprecated_new(*_); end
+
+  def self.new(*args, &block); end
+end
+
+class ActiveModel::Serializer::Adapter::Base
+  def initialize(serializer, options=T.unsafe(nil)); end
+end
+
+class ActiveModel::Serializer::Adapter::Base
+  def self.inherited(*args, &block); end
+end
+
+class ActiveModel::Serializer::Adapter::Json
+  def initialize(serializer, options=T.unsafe(nil)); end
+end
+
+class ActiveModel::Serializer::Adapter::Json
+  def self._deprecated_new(*_); end
+
+  def self.new(*args, &block); end
+end
+
+class ActiveModel::Serializer::Adapter::JsonApi
+  def initialize(serializer, options=T.unsafe(nil)); end
+end
+
+class ActiveModel::Serializer::Adapter::JsonApi
+  def self._deprecated_new(*_); end
+
+  def self.new(*args, &block); end
+end
+
+class ActiveModel::Serializer::Adapter::Null
+  def initialize(serializer, options=T.unsafe(nil)); end
+end
+
+class ActiveModel::Serializer::Adapter::Null
+  def self._deprecated_new(*_); end
+
+  def self.new(*args, &block); end
+end
+
+module ActiveModel::Serializer::Adapter
+  extend ::T::Sig
+  def self._deprecated_adapter_class(*args, &block); end
+
+  def self._deprecated_adapter_map(*args, &block); end
+
+  def self._deprecated_adapters(*args, &block); end
+
+  def self._deprecated_create(*args, &block); end
+
+  def self._deprecated_lookup(*args, &block); end
+
+  def self._deprecated_register(*args, &block); end
+
+  def self.adapter_class(*args, &block); end
+
+  def self.adapter_map(*args, &block); end
+
+  def self.adapters(*args, &block); end
+
+  def self.create(*args, &block); end
+
+  def self.lookup(*args, &block); end
+
+  def self.register(*args, &block); end
+end
+
+class ActiveModel::Serializer::Association
+  def association_options(); end
+
+  def association_options=(_); end
+
+  def belongs_to?(); end
+
+  def collection?(*args, &block); end
+
+  def include_data?(*args, &block); end
+
+  def key(); end
+
+  def key?(); end
+
+  def lazy_association(); end
+
+  def links(); end
+
+  def meta(); end
+
+  def name(*args, &block); end
+
+  def object(*args, &block); end
+
+  def polymorphic?(); end
+
+  def reflection(); end
+
+  def reflection=(_); end
+
+  def reflection_options(*args, &block); end
+
+  def serializable_hash(adapter_options, adapter_instance); end
+
+  def virtual_value(*args, &block); end
+end
+
+class ActiveModel::Serializer::Association
+  def self.[](*_); end
+
+  def self.members(); end
+end
+
+class ActiveModel::Serializer::BelongsToReflection
+end
+
+class ActiveModel::Serializer::BelongsToReflection
+end
+
+module ActiveModel::Serializer::Caching
+  CALLER_FILE = ::T.let(nil, ::T.untyped)
+end
+
+module ActiveModel::Serializer::Caching::ClassMethods
+  extend ::T::Sig
+end
+
+module ActiveModel::Serializer::Caching
+  extend ::T::Sig
+end
+
+class ActiveModel::Serializer::HasManyReflection
+end
+
+class ActiveModel::Serializer::HasManyReflection
+end
+
+class ActiveModel::Serializer::HasOneReflection
+end
+
+class ActiveModel::Serializer::HasOneReflection
+end
+
+class ActiveModel::Serializer::Link
+end
+
+class ActiveModel::Serializer::Link
+end
+
+module ActiveModel::Serializer::Lint::Tests
+  extend ::T::Sig
+end
+
+module ActiveModel::Serializer::Lint
+  extend ::T::Sig
+end
+
+class ActiveModel::Serializer::Null
+  def associations(*_); end
+
+  def attributes(*_); end
+
+  def serializable_hash(*_); end
+end
+
+class ActiveModel::Serializer::Null
+end
+
+class ActiveModel::Serializer::Reflection
+  def build_association(parent_serializer, parent_serializer_options, include_slice=T.unsafe(nil)); end
+
+  def collection?(); end
+
+  def foreign_key(); end
+
+  def foreign_key_on(); end
+
+  def include_data(value=T.unsafe(nil)); end
+
+  def include_data?(include_slice); end
+
+  def link(name, value=T.unsafe(nil)); end
+
+  def meta(value=T.unsafe(nil)); end
+
+  def object(); end
+
+  def object=(object); end
+
+  def scope(); end
+
+  def scope=(scope); end
+
+  def type(); end
+
+  def value(serializer, include_slice); end
+end
+
+class ActiveModel::Serializer::Reflection
+end
+
 module ActiveModel::Serializers::JSON
   extend ::T::Sig
 end
@@ -2696,6 +2920,551 @@ module ActiveModel::Validations
 end
 
 module ActiveModel
+  extend ::T::Sig
+end
+
+module ActiveModelSerializers::Adapter
+end
+
+class ActiveModelSerializers::Adapter::Attributes
+  def serializable_hash(options=T.unsafe(nil)); end
+end
+
+class ActiveModelSerializers::Adapter::Attributes
+end
+
+class ActiveModelSerializers::Adapter::Base
+  def cache_key(); end
+
+  def fragment_cache(cached_hash, non_cached_hash); end
+
+  def initialize(serializer, options=T.unsafe(nil)); end
+
+  def instance_options(); end
+
+  def serializable_hash(_options=T.unsafe(nil)); end
+
+  def serializer(); end
+end
+
+class ActiveModelSerializers::Adapter::Base
+  def self.cache_key(); end
+
+  def self.default_key_transform(); end
+
+  def self.fragment_cache(cached_hash, non_cached_hash); end
+
+  def self.inherited(subclass); end
+
+  def self.transform(options); end
+
+  def self.transform_key_casing!(value, options); end
+end
+
+class ActiveModelSerializers::Adapter::Json
+  def meta(); end
+
+  def meta_key(); end
+
+  def serializable_hash(options=T.unsafe(nil)); end
+end
+
+class ActiveModelSerializers::Adapter::Json
+end
+
+class ActiveModelSerializers::Adapter::JsonApi
+  def failure_document(); end
+
+  def fieldset(); end
+
+  def serializable_hash(*_); end
+
+  def success_document(); end
+end
+
+module ActiveModelSerializers::Adapter::JsonApi::Deserialization
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::Deserialization::InvalidDocument
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::Deserialization::InvalidDocument
+end
+
+module ActiveModelSerializers::Adapter::JsonApi::Deserialization
+  extend ::T::Sig
+  def self.field_key(field, options); end
+
+  def self.filter_fields(fields, options); end
+
+  def self.parse(document, options=T.unsafe(nil)); end
+
+  def self.parse!(document, options=T.unsafe(nil)); end
+
+  def self.parse_attributes(attributes, options); end
+
+  def self.parse_relationship(assoc_name, assoc_data, options); end
+
+  def self.parse_relationships(relationships, options); end
+
+  def self.transform_keys(hash, options); end
+
+  def self.validate_payload(payload); end
+end
+
+module ActiveModelSerializers::Adapter::JsonApi::Error
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::Error::UnknownSourceTypeError
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::Error::UnknownSourceTypeError
+end
+
+module ActiveModelSerializers::Adapter::JsonApi::Error
+  extend ::T::Sig
+  def self.attribute_error_objects(attribute_name, attribute_errors); end
+
+  def self.error_source(source_type, attribute_name); end
+
+  def self.resource_errors(error_serializer, options); end
+end
+
+module ActiveModelSerializers::Adapter::JsonApi::Jsonapi
+end
+
+module ActiveModelSerializers::Adapter::JsonApi::Jsonapi
+  extend ::T::Sig
+  def self.add!(hash); end
+
+  def self.include_object?(); end
+
+  def self.object(); end
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::Link
+  include ::ActiveModelSerializers::SerializationContext::UrlHelpers
+  include ::ActionDispatch::Routing::UrlFor
+  include ::ActionDispatch::Routing::PolymorphicRoutes
+  def as_json(); end
+
+  def href(value); end
+
+  def initialize(serializer, value); end
+
+  def meta(value); end
+
+  def object(); end
+
+  def scope(); end
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::Link
+  def self._routes(); end
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::Meta
+  def as_json(); end
+
+  def initialize(serializer); end
+
+  def object(); end
+
+  def scope(); end
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::Meta
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::PaginationLinks
+  def adapter_options(); end
+
+  def as_json(); end
+
+  def collection(); end
+
+  def context(); end
+
+  def initialize(collection, adapter_options); end
+  FIRST_PAGE = ::T.let(nil, ::T.untyped)
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::PaginationLinks::MissingSerializationContextError
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::PaginationLinks::MissingSerializationContextError
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::PaginationLinks
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::Relationship
+  def as_json(); end
+
+  def association(); end
+
+  def initialize(parent_serializer, serializable_resource_options, association); end
+
+  def parent_serializer(); end
+
+  def serializable_resource_options(); end
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::Relationship
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::ResourceIdentifier
+  def as_json(); end
+
+  def id(); end
+
+  def initialize(serializer, options); end
+
+  def type(); end
+end
+
+class ActiveModelSerializers::Adapter::JsonApi::ResourceIdentifier
+  def self.for_type_with_id(type, id, options); end
+
+  def self.inflect_type(type); end
+
+  def self.raw_type_from_serializer_object(object); end
+
+  def self.type_for(serializer, serializer_type=T.unsafe(nil), transform_options=T.unsafe(nil)); end
+end
+
+class ActiveModelSerializers::Adapter::JsonApi
+  extend ::ActiveSupport::Autoload
+  def self.fragment_cache(cached_hash, non_cached_hash, root=T.unsafe(nil)); end
+end
+
+class ActiveModelSerializers::Adapter::Null
+  def serializable_hash(*_); end
+end
+
+class ActiveModelSerializers::Adapter::Null
+end
+
+class ActiveModelSerializers::Adapter::UnknownAdapterError
+end
+
+class ActiveModelSerializers::Adapter::UnknownAdapterError
+end
+
+module ActiveModelSerializers::Adapter
+  extend ::ActiveSupport::Autoload
+  extend ::T::Sig
+  def self.adapter_class(adapter); end
+
+  def self.adapter_map(); end
+
+  def self.adapters(); end
+
+  def self.configured_adapter(); end
+
+  def self.create(resource, options=T.unsafe(nil)); end
+
+  def self.lookup(adapter); end
+
+  def self.new(*args); end
+
+  def self.register(name, klass=T.unsafe(nil)); end
+
+  def self.registered_name(adapter_class); end
+end
+
+module ActiveModelSerializers::Callbacks::ClassMethods
+  extend ::T::Sig
+end
+
+module ActiveModelSerializers::Callbacks
+  extend ::T::Sig
+end
+
+module ActiveModelSerializers::Deprecate
+  extend ::T::Sig
+end
+
+module ActiveModelSerializers::Deserialization
+end
+
+module ActiveModelSerializers::Deserialization
+  extend ::T::Sig
+  def self.jsonapi_parse(*args); end
+
+  def self.jsonapi_parse!(*args); end
+end
+
+module ActiveModelSerializers::JsonPointer
+  POINTERS = ::T.let(nil, ::T.untyped)
+end
+
+module ActiveModelSerializers::JsonPointer
+  extend ::T::Sig
+  def self.new(pointer_type, value=T.unsafe(nil)); end
+end
+
+module ActiveModelSerializers::Logging
+  RENDER_EVENT = ::T.let(nil, ::T.untyped)
+end
+
+module ActiveModelSerializers::Logging::ClassMethods
+  extend ::T::Sig
+end
+
+class ActiveModelSerializers::Logging::LogSubscriber
+  def render(event); end
+end
+
+module ActiveModelSerializers::Logging::Macros
+  extend ::T::Sig
+end
+
+module ActiveModelSerializers::Logging
+  extend ::T::Sig
+end
+
+module ActiveModelSerializers::LookupChain
+  BY_NAMESPACE = ::T.let(nil, ::T.untyped)
+  BY_PARENT_SERIALIZER = ::T.let(nil, ::T.untyped)
+  BY_RESOURCE = ::T.let(nil, ::T.untyped)
+  BY_RESOURCE_NAMESPACE = ::T.let(nil, ::T.untyped)
+  DEFAULT = ::T.let(nil, ::T.untyped)
+end
+
+module ActiveModelSerializers::LookupChain
+  extend ::T::Sig
+end
+
+class ActiveModelSerializers::Model
+  include ::ActiveModel::Serializers::JSON
+  include ::ActiveModel::Serialization
+  include ::ActiveModel::Validations
+  include ::ActiveSupport::Callbacks
+  include ::ActiveModel::Validations::HelperMethods
+  include ::ActiveModel::Conversion
+  include ::ActiveModel::Model
+  include ::ActiveModel::AttributeAssignment
+  include ::ActiveModel::ForbiddenAttributesProtection
+  def __callbacks(); end
+
+  def __callbacks?(); end
+
+  def _run_validate_callbacks(&block); end
+
+  def _validate_callbacks(); end
+
+  def _validators(); end
+
+  def _validators?(); end
+
+  def attributes(); end
+
+  def cache_key(); end
+
+  def id(); end
+
+  def include_root_in_json(); end
+
+  def include_root_in_json?(); end
+
+  def model_name(*args, &block); end
+
+  def updated_at(); end
+
+  def updated_at=(updated_at); end
+
+  def validation_context(); end
+end
+
+module ActiveModelSerializers::Model::DeriveAttributesFromNamesAndFixAccessors
+  def attributes(); end
+end
+
+module ActiveModelSerializers::Model::DeriveAttributesFromNamesAndFixAccessors
+  extend ::T::Sig
+  def self.included(base); end
+end
+
+class ActiveModelSerializers::Model
+  extend ::ActiveModel::Validations::ClassMethods
+  extend ::ActiveModel::Callbacks
+  extend ::ActiveSupport::DescendantsTracker
+  extend ::ActiveModel::Translation
+  extend ::ActiveModel::Naming
+  extend ::ActiveModel::Validations::HelperMethods
+  extend ::ActiveModel::Conversion::ClassMethods
+  def self.__callbacks(); end
+
+  def self.__callbacks=(val); end
+
+  def self.__callbacks?(); end
+
+  def self._validate_callbacks(); end
+
+  def self._validate_callbacks=(value); end
+
+  def self._validators(); end
+
+  def self._validators=(val); end
+
+  def self._validators?(); end
+
+  def self.attribute_names(); end
+
+  def self.attribute_names=(val); end
+
+  def self.attribute_names?(); end
+
+  def self.attributes(*names); end
+
+  def self.derive_attributes_from_names_and_fix_accessors(); end
+
+  def self.include_root_in_json(); end
+
+  def self.include_root_in_json=(val); end
+
+  def self.include_root_in_json?(); end
+end
+
+class ActiveModelSerializers::SerializableResource
+  ADAPTER_OPTION_KEYS = ::T.let(nil, ::T.untyped)
+end
+
+module ActiveModelSerializers::SerializationContext::UrlHelpers
+  extend ::T::Sig
+end
+
+module ActiveModelSerializers::Test
+end
+
+module ActiveModelSerializers::Test::Schema
+  def assert_request_response_schema(schema_path=T.unsafe(nil), message=T.unsafe(nil)); end
+
+  def assert_request_schema(schema_path=T.unsafe(nil), message=T.unsafe(nil)); end
+
+  def assert_response_schema(schema_path=T.unsafe(nil), message=T.unsafe(nil)); end
+
+  def assert_schema(payload, schema_path=T.unsafe(nil), message=T.unsafe(nil)); end
+end
+
+class ActiveModelSerializers::Test::Schema::AssertRequestSchema
+  def initialize(*_); end
+end
+
+class ActiveModelSerializers::Test::Schema::AssertRequestSchema
+end
+
+class ActiveModelSerializers::Test::Schema::AssertResponseSchema
+  def initialize(*_); end
+end
+
+class ActiveModelSerializers::Test::Schema::AssertResponseSchema
+end
+
+class ActiveModelSerializers::Test::Schema::AssertSchema
+  def action(); end
+
+  def add_schema_to_document_store(); end
+
+  def call(); end
+
+  def controller_path(); end
+
+  def document_store(); end
+
+  def initialize(schema_path, request, response, message, payload=T.unsafe(nil)); end
+
+  def json_schema(); end
+
+  def load_json(json); end
+
+  def load_json_file(path); end
+
+  def message(); end
+
+  def payload(); end
+
+  def request(); end
+
+  def request_params(); end
+
+  def require_json_schema!(); end
+
+  def response(); end
+
+  def response_body(); end
+
+  def schema_data(); end
+
+  def schema_directory(); end
+
+  def schema_full_path(); end
+
+  def schema_path(); end
+
+  def schema_path_default(); end
+end
+
+class ActiveModelSerializers::Test::Schema::AssertSchema
+end
+
+class ActiveModelSerializers::Test::Schema::InvalidSchemaError
+end
+
+class ActiveModelSerializers::Test::Schema::InvalidSchemaError
+end
+
+class ActiveModelSerializers::Test::Schema::MissingSchema
+end
+
+class ActiveModelSerializers::Test::Schema::MissingSchema
+end
+
+module ActiveModelSerializers::Test::Schema
+  extend ::T::Sig
+end
+
+module ActiveModelSerializers::Test::Serializer
+  def assert_serializer(expectation, message=T.unsafe(nil)); end
+end
+
+class ActiveModelSerializers::Test::Serializer::AssertSerializer
+  def expectation(); end
+
+  def expectation=(expectation); end
+
+  def matches?(); end
+
+  def message(); end
+
+  def message=(message); end
+
+  def response(); end
+
+  def response=(response); end
+
+  def serializers(); end
+
+  def subscribe(); end
+
+  def unsubscribe(); end
+end
+
+class ActiveModelSerializers::Test::Serializer::AssertSerializer
+end
+
+module ActiveModelSerializers::Test::Serializer
+  extend ::ActiveSupport::Concern
+  extend ::T::Sig
+end
+
+module ActiveModelSerializers::Test
+  extend ::ActiveSupport::Autoload
+  extend ::T::Sig
+end
+
+module ActiveModelSerializers
   extend ::T::Sig
 end
 
@@ -3239,6 +4008,13 @@ module ActiveRecord::AttributeMethods
 end
 
 module ActiveRecord::AttributeMethods::AttrNames
+  ATTR_36275616475646f51647 = ::T.let(nil, ::T.untyped)
+  ATTR_57074616475646f51647 = ::T.let(nil, ::T.untyped)
+  ATTR_6716c65756 = ::T.let(nil, ::T.untyped)
+  ATTR_b65697 = ::T.let(nil, ::T.untyped)
+end
+
+module ActiveRecord::AttributeMethods::AttrNames
   extend ::T::Sig
 end
 
@@ -3289,9 +4065,6 @@ end
 
 module ActiveRecord::AttributeMethods::TimeZoneConversion::ClassMethods
   extend ::T::Sig
-end
-
-class ActiveRecord::AttributeMethods::TimeZoneConversion::TimeZoneConverter
 end
 
 module ActiveRecord::AttributeMethods::TimeZoneConversion
@@ -3399,55 +4172,6 @@ class ActiveRecord::ConnectionAdapters::AbstractAdapter
   include ::ActiveRecord::ConnectionAdapters::DatabaseStatements
   ADAPTER_NAME = ::T.let(nil, ::T.untyped)
   SIMPLE_INT = ::T.let(nil, ::T.untyped)
-end
-
-class ActiveRecord::ConnectionAdapters::Column
-  def ==(other); end
-
-  def attributes_for_hash(); end
-
-  def bigint?(); end
-
-  def collation(); end
-
-  def comment(); end
-
-  def default(); end
-
-  def default_function(); end
-
-  def encode_with(coder); end
-
-  def eql?(other); end
-
-  def has_default?(); end
-
-  def human_name(); end
-
-  def init_with(coder); end
-
-  def initialize(name, default, sql_type_metadata=T.unsafe(nil), null=T.unsafe(nil), table_name=T.unsafe(nil), default_function=T.unsafe(nil), collation=T.unsafe(nil), comment: T.unsafe(nil), **_); end
-
-  def limit(*args, &block); end
-
-  def name(); end
-
-  def null(); end
-
-  def precision(*args, &block); end
-
-  def scale(*args, &block); end
-
-  def sql_type(*args, &block); end
-
-  def sql_type_metadata(); end
-
-  def table_name(); end
-
-  def type(*args, &block); end
-end
-
-class ActiveRecord::ConnectionAdapters::Column
 end
 
 module ActiveRecord::ConnectionAdapters::ColumnMethods
@@ -3624,50 +4348,20 @@ module ActiveRecord::Integration
   extend ::T::Sig
 end
 
-class ActiveRecord::InternalMetadata
-  include ::ActiveRecord::InternalMetadata::GeneratedAssociationMethods
-end
-
-module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
-end
-
 module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
   extend ::T::Sig
 end
 
-class ActiveRecord::InternalMetadata
-  def self.[](key); end
-
-  def self.[]=(key, value); end
-
-  def self.create_table(); end
-end
-
-module ActiveRecord::LegacyYamlAdapter
-end
-
-module ActiveRecord::LegacyYamlAdapter::Rails41
-end
-
 module ActiveRecord::LegacyYamlAdapter::Rails41
   extend ::T::Sig
-  def self.convert(klass, coder); end
-end
-
-module ActiveRecord::LegacyYamlAdapter::Rails420
 end
 
 module ActiveRecord::LegacyYamlAdapter::Rails420
   extend ::T::Sig
-  def self.convert(klass, coder); end
 end
 
 module ActiveRecord::LegacyYamlAdapter
   extend ::T::Sig
-  def self.convert(klass, coder); end
-end
-
-class ActiveRecord::Locking::LockingType
 end
 
 module ActiveRecord::Locking::Optimistic
@@ -3816,72 +4510,16 @@ end
 class ActiveRecord::Migration::CommandRecorder
 end
 
-class ActiveRecord::Migration::Compatibility::V4_2
-  def add_belongs_to(*_, **options); end
-
-  def add_reference(*_, **options); end
-
-  def add_timestamps(_, **options); end
-
-  def index_exists?(table_name, column_name, options=T.unsafe(nil)); end
-
-  def remove_index(table_name, options=T.unsafe(nil)); end
-end
-
-module ActiveRecord::Migration::Compatibility::V4_2::TableDefinition
-  def belongs_to(*_, **options); end
-
-  def references(*_, **options); end
-
-  def timestamps(**options); end
-end
-
 module ActiveRecord::Migration::Compatibility::V4_2::TableDefinition
   extend ::T::Sig
 end
 
-class ActiveRecord::Migration::Compatibility::V4_2
-end
-
-class ActiveRecord::Migration::Compatibility::V5_0
-  def add_belongs_to(table_name, ref_name, **options); end
-
-  def add_column(table_name, column_name, type, options=T.unsafe(nil)); end
-
-  def add_reference(table_name, ref_name, **options); end
-
-  def change_table(table_name, options=T.unsafe(nil)); end
-
-  def create_join_table(table_1, table_2, column_options: T.unsafe(nil), **options); end
-end
-
-module ActiveRecord::Migration::Compatibility::V5_0::TableDefinition
-  def belongs_to(*args, **options); end
-
-  def primary_key(name, type=T.unsafe(nil), **options); end
-
-  def references(*args, **options); end
-end
-
 module ActiveRecord::Migration::Compatibility::V5_0::TableDefinition
   extend ::T::Sig
-end
-
-class ActiveRecord::Migration::Compatibility::V5_0
-end
-
-class ActiveRecord::Migration::Compatibility::V5_1
-  def change_column(table_name, column_name, type, options=T.unsafe(nil)); end
-
-  def create_table(table_name, options=T.unsafe(nil)); end
-end
-
-class ActiveRecord::Migration::Compatibility::V5_1
 end
 
 module ActiveRecord::Migration::Compatibility
   extend ::T::Sig
-  def self.find(version); end
 end
 
 module ActiveRecord::Migration::JoinTable
@@ -3964,118 +4602,8 @@ module ActiveRecord::Persistence
   extend ::T::Sig
 end
 
-class ActiveRecord::PredicateBuilder
-  def build(attribute, value); end
-
-  def build_bind_attribute(column_name, value); end
-
-  def build_from_hash(attributes); end
-
-  def expand_from_hash(attributes); end
-
-  def initialize(table); end
-
-  def register_handler(klass, handler); end
-
-  def resolve_column_aliases(*args, &block); end
-
-  def table(); end
-end
-
-class ActiveRecord::PredicateBuilder::ArrayHandler
-  def call(attribute, value); end
-
-  def initialize(predicate_builder); end
-
-  def predicate_builder(); end
-end
-
-module ActiveRecord::PredicateBuilder::ArrayHandler::NullPredicate
-end
-
 module ActiveRecord::PredicateBuilder::ArrayHandler::NullPredicate
   extend ::T::Sig
-  def self.or(other); end
-end
-
-class ActiveRecord::PredicateBuilder::ArrayHandler
-end
-
-class ActiveRecord::PredicateBuilder::AssociationQueryValue
-  def associated_table(); end
-
-  def initialize(associated_table, value); end
-
-  def queries(); end
-
-  def value(); end
-end
-
-class ActiveRecord::PredicateBuilder::AssociationQueryValue
-end
-
-class ActiveRecord::PredicateBuilder::BaseHandler
-  def call(attribute, value); end
-
-  def initialize(predicate_builder); end
-
-  def predicate_builder(); end
-end
-
-class ActiveRecord::PredicateBuilder::BaseHandler
-end
-
-class ActiveRecord::PredicateBuilder::BasicObjectHandler
-  def call(attribute, value); end
-
-  def initialize(predicate_builder); end
-
-  def predicate_builder(); end
-end
-
-class ActiveRecord::PredicateBuilder::BasicObjectHandler
-end
-
-class ActiveRecord::PredicateBuilder::PolymorphicArrayValue
-  def associated_table(); end
-
-  def initialize(associated_table, values); end
-
-  def queries(); end
-
-  def values(); end
-end
-
-class ActiveRecord::PredicateBuilder::PolymorphicArrayValue
-end
-
-class ActiveRecord::PredicateBuilder::RangeHandler
-  def call(attribute, value); end
-
-  def initialize(predicate_builder); end
-
-  def predicate_builder(); end
-end
-
-class ActiveRecord::PredicateBuilder::RangeHandler::RangeWithBinds
-  def exclude_end?(); end
-end
-
-class ActiveRecord::PredicateBuilder::RangeHandler::RangeWithBinds
-end
-
-class ActiveRecord::PredicateBuilder::RangeHandler
-end
-
-class ActiveRecord::PredicateBuilder::RelationHandler
-  def call(attribute, value); end
-end
-
-class ActiveRecord::PredicateBuilder::RelationHandler
-end
-
-class ActiveRecord::PredicateBuilder
-  def self.references(attributes); end
 end
 
 module ActiveRecord::QueryCache::ClassMethods
@@ -4159,10 +4687,6 @@ module ActiveRecord::Sanitization
   extend ::T::Sig
 end
 
-class ActiveRecord::Schema
-  def define(info, &block); end
-end
-
 module ActiveRecord::SchemaMigration::GeneratedAssociationMethods
   extend ::T::Sig
 end
@@ -4203,66 +4727,6 @@ module ActiveRecord::SpawnMethods
   extend ::T::Sig
 end
 
-class ActiveRecord::StatementCache
-  def bind_map(); end
-
-  def execute(params, connection, &block); end
-
-  def initialize(query_builder, bind_map, klass); end
-
-  def klass(); end
-
-  def query_builder(); end
-end
-
-class ActiveRecord::StatementCache::BindMap
-  def bind(values); end
-
-  def initialize(bound_attributes); end
-end
-
-class ActiveRecord::StatementCache::BindMap
-end
-
-class ActiveRecord::StatementCache::Params
-  def bind(); end
-end
-
-class ActiveRecord::StatementCache::Params
-end
-
-class ActiveRecord::StatementCache::PartialQuery
-  def initialize(values); end
-end
-
-class ActiveRecord::StatementCache::PartialQuery
-end
-
-class ActiveRecord::StatementCache::Query
-  def initialize(sql); end
-
-  def sql_for(binds, connection); end
-end
-
-class ActiveRecord::StatementCache::Query
-end
-
-class ActiveRecord::StatementCache::Substitute
-end
-
-class ActiveRecord::StatementCache::Substitute
-end
-
-class ActiveRecord::StatementCache
-  def self.create(connection, block=T.unsafe(nil)); end
-
-  def self.partial_query(values); end
-
-  def self.query(sql); end
-
-  def self.unsupported_value?(value); end
-end
-
 module ActiveRecord::Store::ClassMethods
   extend ::T::Sig
 end
@@ -4279,43 +4743,8 @@ module ActiveRecord::Suppressor
   extend ::T::Sig
 end
 
-class ActiveRecord::TableMetadata
-  def aggregated_with?(aggregation_name); end
-
-  def arel_attribute(column_name); end
-
-  def arel_table(); end
-
-  def associated_table(table_name); end
-
-  def associated_with?(association_name); end
-
-  def association(); end
-
-  def association_foreign_key(*args, &block); end
-
-  def association_foreign_type(*args, &block); end
-
-  def association_join_foreign_key(*args, &block); end
-
-  def association_join_primary_key(*args, &block); end
-
-  def has_column?(column_name); end
-
-  def initialize(klass, arel_table, association=T.unsafe(nil)); end
-
-  def klass(); end
-
-  def polymorphic_association?(); end
-
-  def reflect_on_aggregation(aggregation_name); end
-
-  def resolve_column_aliases(hash); end
-
-  def type(column_name); end
-end
-
-class ActiveRecord::TableMetadata
+class ActiveRecord::SuppressorRegistry
+  def self.suppressed(*args, &block); end
 end
 
 module ActiveRecord::Tasks::DatabaseTasks
@@ -4551,13 +4980,7 @@ module ActiveRecord::Type::Internal
   extend ::T::Sig
 end
 
-class ActiveRecord::Type::Serialized
-end
-
 ActiveRecord::Type::String = ActiveModel::Type::String
-
-class ActiveRecord::Type::Time::Value
-end
 
 module ActiveRecord::Type
   extend ::T::Sig
@@ -5844,6 +6267,17 @@ class Binding
 end
 
 class Binding
+  extend ::T::Sig
+end
+
+class Book
+  include ::Book::GeneratedAssociationMethods
+end
+
+module Book::GeneratedAssociationMethods
+end
+
+module Book::GeneratedAssociationMethods
   extend ::T::Sig
 end
 
@@ -9262,13 +9696,13 @@ end
 
 class File
   extend ::T::Sig
-  def self.empty?(_); end
-
   def self.exists?(_); end
 
   def self.lutime(*_); end
 
   def self.mkfifo(*_); end
+
+  def self.probe_stat_in(dir); end
 
 end
 
@@ -15394,6 +15828,14 @@ module JSON
   extend ::T::Sig
 end
 
+module JSONAPI::IncludeDirective::Parser
+  extend ::T::Sig
+end
+
+module JSONAPI
+  extend ::T::Sig
+end
+
 class Jbuilder
   BLANK = ::T.let(nil, ::T.untyped)
   NON_ENUMERABLES = ::T.let(nil, ::T.untyped)
@@ -17146,6 +17588,8 @@ end
 module Minitest
 end
 
+MiniTest::Assertion = Minitest::Assertion
+
 MiniTest::Assertions = Minitest::Assertions
 
 MiniTest::Guard = Minitest::Guard
@@ -17410,8 +17854,6 @@ end
 module Net::HTTP::ProxyDelta
   extend ::T::Sig
 end
-
-Net::HTTP::ProxyMod = Net::HTTP::ProxyDelta
 
 class Net::HTTP::Put
   extend ::T::Sig
@@ -17765,7 +18207,15 @@ class Net::HTTPServiceUnavailable
   extend ::T::Sig
 end
 
-Net::HTTPSession = Net::HTTP
+class Net::HTTP
+end
+
+Net::HTTPSession::ProxyDelta = Net::HTTP::ProxyDelta
+
+Net::HTTPSession::ProxyMod = Net::HTTP::ProxyDelta
+
+class Net::HTTP
+end
 
 Net::HTTPSuccess::EXCEPTION_TYPE = Net::HTTPError
 

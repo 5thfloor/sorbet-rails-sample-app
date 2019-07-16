@@ -857,6 +857,326 @@
 # wrong constant name initialize
 # wrong constant name persisted?
 # wrong constant name <static-init>
+# wrong constant name <Class:Adapter>
+# wrong constant name <Class:Association>
+# wrong constant name <Class:BelongsToReflection>
+# uninitialized constant ActiveModel::Serializer::CALLER_FILE
+# wrong constant name <Class:HasManyReflection>
+# wrong constant name <Class:HasOneReflection>
+# wrong constant name <Class:Link>
+# wrong constant name <Class:Null>
+# wrong constant name <Class:Reflection>
+# wrong constant name <Class:Attributes>
+# wrong constant name <Class:Base>
+# wrong constant name <Class:Json>
+# wrong constant name <Class:JsonApi>
+# wrong constant name <Class:Null>
+# wrong constant name initialize
+# wrong constant name <static-init>
+# wrong constant name _deprecated_new
+# wrong constant name new
+# wrong constant name initialize
+# wrong constant name <static-init>
+# wrong constant name inherited
+# wrong constant name initialize
+# wrong constant name <static-init>
+# wrong constant name _deprecated_new
+# wrong constant name new
+# wrong constant name initialize
+# wrong constant name <static-init>
+# wrong constant name _deprecated_new
+# wrong constant name new
+# wrong constant name initialize
+# wrong constant name <static-init>
+# wrong constant name _deprecated_new
+# wrong constant name new
+# wrong constant name <static-init>
+# wrong constant name _deprecated_adapter_class
+# wrong constant name _deprecated_adapter_map
+# wrong constant name _deprecated_adapters
+# wrong constant name _deprecated_create
+# wrong constant name _deprecated_lookup
+# wrong constant name _deprecated_register
+# wrong constant name adapter_class
+# wrong constant name adapter_map
+# wrong constant name adapters
+# wrong constant name create
+# wrong constant name lookup
+# wrong constant name register
+# uninitialized constant ActiveModel::Serializer::Association::Elem
+# wrong constant name association_options
+# wrong constant name association_options=
+# wrong constant name belongs_to?
+# wrong constant name collection?
+# wrong constant name include_data?
+# wrong constant name key
+# wrong constant name key?
+# wrong constant name lazy_association
+# wrong constant name links
+# wrong constant name meta
+# wrong constant name name
+# wrong constant name object
+# wrong constant name polymorphic?
+# wrong constant name reflection
+# wrong constant name reflection=
+# wrong constant name reflection_options
+# wrong constant name serializable_hash
+# wrong constant name virtual_value
+# wrong constant name <static-init>
+# wrong constant name []
+# wrong constant name members
+# uninitialized constant ActiveModel::Serializer::BelongsToReflection::Elem
+# wrong constant name <static-init>
+# uninitialized constant ActiveModel::Serializer::HasManyReflection::Elem
+# wrong constant name <static-init>
+# uninitialized constant ActiveModel::Serializer::HasOneReflection::Elem
+# wrong constant name <static-init>
+# uninitialized constant ActiveModel::Serializer::Link::Elem
+# wrong constant name <static-init>
+# uninitialized constant ActiveModel::Serializer::Null::CALLER_FILE
+# uninitialized constant ActiveModel::Serializer::Null::REFLECTION_OPTIONS
+# uninitialized constant ActiveModel::Serializer::Null::SERIALIZABLE_HASH_VALID_KEYS
+# uninitialized constant ActiveModel::Serializer::Null::VERSION
+# wrong constant name associations
+# wrong constant name attributes
+# wrong constant name serializable_hash
+# wrong constant name <static-init>
+# uninitialized constant ActiveModel::Serializer::Reflection::Elem
+# wrong constant name build_association
+# wrong constant name collection?
+# wrong constant name foreign_key
+# wrong constant name foreign_key_on
+# wrong constant name include_data
+# wrong constant name include_data?
+# wrong constant name link
+# wrong constant name meta
+# wrong constant name object
+# wrong constant name object=
+# wrong constant name scope
+# wrong constant name scope=
+# wrong constant name type
+# wrong constant name value
+# wrong constant name <static-init>
+# wrong constant name <Class:Attributes>
+# wrong constant name <Class:Base>
+# wrong constant name <Class:Json>
+# wrong constant name <Class:JsonApi>
+# wrong constant name <Class:Null>
+# wrong constant name <Class:UnknownAdapterError>
+# wrong constant name serializable_hash
+# wrong constant name <static-init>
+# wrong constant name cache_key
+# wrong constant name fragment_cache
+# wrong constant name initialize
+# wrong constant name instance_options
+# wrong constant name serializable_hash
+# wrong constant name serializer
+# wrong constant name <static-init>
+# wrong constant name cache_key
+# wrong constant name default_key_transform
+# wrong constant name fragment_cache
+# wrong constant name inherited
+# wrong constant name transform
+# wrong constant name transform_key_casing!
+# wrong constant name meta
+# wrong constant name meta_key
+# wrong constant name serializable_hash
+# wrong constant name <static-init>
+# wrong constant name <Class:Deserialization>
+# wrong constant name <Class:Error>
+# wrong constant name <Class:Jsonapi>
+# wrong constant name <Class:Link>
+# wrong constant name <Class:Meta>
+# wrong constant name <Class:PaginationLinks>
+# wrong constant name <Class:Relationship>
+# wrong constant name <Class:ResourceIdentifier>
+# wrong constant name failure_document
+# wrong constant name fieldset
+# wrong constant name serializable_hash
+# wrong constant name success_document
+# wrong constant name <Class:InvalidDocument>
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name field_key
+# wrong constant name filter_fields
+# wrong constant name parse
+# wrong constant name parse!
+# wrong constant name parse_attributes
+# wrong constant name parse_relationship
+# wrong constant name parse_relationships
+# wrong constant name transform_keys
+# wrong constant name validate_payload
+# wrong constant name <Class:UnknownSourceTypeError>
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name attribute_error_objects
+# wrong constant name error_source
+# wrong constant name resource_errors
+# wrong constant name <static-init>
+# wrong constant name add!
+# wrong constant name include_object?
+# wrong constant name object
+# wrong constant name as_json
+# wrong constant name href
+# wrong constant name initialize
+# wrong constant name meta
+# wrong constant name object
+# wrong constant name scope
+# wrong constant name <static-init>
+# wrong constant name _routes
+# wrong constant name as_json
+# wrong constant name initialize
+# wrong constant name object
+# wrong constant name scope
+# wrong constant name <static-init>
+# wrong constant name <Class:MissingSerializationContextError>
+# wrong constant name adapter_options
+# wrong constant name as_json
+# wrong constant name collection
+# wrong constant name context
+# wrong constant name initialize
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name as_json
+# wrong constant name association
+# wrong constant name initialize
+# wrong constant name parent_serializer
+# wrong constant name serializable_resource_options
+# wrong constant name <static-init>
+# wrong constant name as_json
+# wrong constant name id
+# wrong constant name initialize
+# wrong constant name type
+# wrong constant name <static-init>
+# wrong constant name for_type_with_id
+# wrong constant name inflect_type
+# wrong constant name raw_type_from_serializer_object
+# wrong constant name type_for
+# wrong constant name <static-init>
+# wrong constant name fragment_cache
+# wrong constant name serializable_hash
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name adapter_class
+# wrong constant name adapter_map
+# wrong constant name adapters
+# wrong constant name configured_adapter
+# wrong constant name create
+# wrong constant name lookup
+# wrong constant name new
+# wrong constant name register
+# wrong constant name registered_name
+# wrong constant name <static-init>
+# wrong constant name jsonapi_parse
+# wrong constant name jsonapi_parse!
+# wrong constant name <static-init>
+# wrong constant name new
+# uninitialized constant ActiveModelSerializers::Logging::LogSubscriber::BLACK
+# uninitialized constant ActiveModelSerializers::Logging::LogSubscriber::BLUE
+# uninitialized constant ActiveModelSerializers::Logging::LogSubscriber::BOLD
+# uninitialized constant ActiveModelSerializers::Logging::LogSubscriber::CLEAR
+# uninitialized constant ActiveModelSerializers::Logging::LogSubscriber::CYAN
+# uninitialized constant ActiveModelSerializers::Logging::LogSubscriber::GREEN
+# uninitialized constant ActiveModelSerializers::Logging::LogSubscriber::MAGENTA
+# uninitialized constant ActiveModelSerializers::Logging::LogSubscriber::RED
+# uninitialized constant ActiveModelSerializers::Logging::LogSubscriber::WHITE
+# uninitialized constant ActiveModelSerializers::Logging::LogSubscriber::YELLOW
+# wrong constant name render
+# uninitialized constant ActiveModelSerializers::Model::CALLBACK_FILTER_TYPES
+# wrong constant name <Class:DeriveAttributesFromNamesAndFixAccessors>
+# wrong constant name __callbacks
+# wrong constant name __callbacks?
+# wrong constant name _run_validate_callbacks
+# wrong constant name _validate_callbacks
+# wrong constant name _validators
+# wrong constant name _validators?
+# wrong constant name attributes
+# wrong constant name cache_key
+# wrong constant name id
+# wrong constant name include_root_in_json
+# wrong constant name include_root_in_json?
+# wrong constant name model_name
+# wrong constant name updated_at
+# wrong constant name updated_at=
+# wrong constant name validation_context
+# wrong constant name attributes
+# wrong constant name <static-init>
+# wrong constant name included
+# wrong constant name <static-init>
+# wrong constant name __callbacks
+# wrong constant name __callbacks=
+# wrong constant name __callbacks?
+# wrong constant name _validate_callbacks
+# wrong constant name _validate_callbacks=
+# wrong constant name _validators
+# wrong constant name _validators=
+# wrong constant name _validators?
+# wrong constant name attribute_names
+# wrong constant name attribute_names=
+# wrong constant name attribute_names?
+# wrong constant name attributes
+# wrong constant name derive_attributes_from_names_and_fix_accessors
+# wrong constant name include_root_in_json
+# wrong constant name include_root_in_json=
+# wrong constant name include_root_in_json?
+# uninitialized constant ActiveModelSerializers::SerializableResource::CALLBACK_FILTER_TYPES
+# uninitialized constant ActiveModelSerializers::SerializableResource::RENDER_EVENT
+# wrong constant name <Class:Schema>
+# wrong constant name <Class:Serializer>
+# wrong constant name <Class:AssertRequestSchema>
+# wrong constant name <Class:AssertResponseSchema>
+# wrong constant name <Class:AssertSchema>
+# wrong constant name <Class:InvalidSchemaError>
+# wrong constant name <Class:MissingSchema>
+# wrong constant name assert_request_response_schema
+# wrong constant name assert_request_schema
+# wrong constant name assert_response_schema
+# wrong constant name assert_schema
+# wrong constant name initialize
+# wrong constant name <static-init>
+# wrong constant name initialize
+# wrong constant name <static-init>
+# wrong constant name action
+# wrong constant name add_schema_to_document_store
+# wrong constant name call
+# wrong constant name controller_path
+# wrong constant name document_store
+# wrong constant name initialize
+# wrong constant name json_schema
+# wrong constant name load_json
+# wrong constant name load_json_file
+# wrong constant name message
+# wrong constant name payload
+# wrong constant name request
+# wrong constant name request_params
+# wrong constant name require_json_schema!
+# wrong constant name response
+# wrong constant name response_body
+# wrong constant name schema_data
+# wrong constant name schema_directory
+# wrong constant name schema_full_path
+# wrong constant name schema_path
+# wrong constant name schema_path_default
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <Class:AssertSerializer>
+# wrong constant name assert_serializer
+# wrong constant name expectation
+# wrong constant name expectation=
+# wrong constant name matches?
+# wrong constant name message
+# wrong constant name message=
+# wrong constant name response
+# wrong constant name response=
+# wrong constant name serializers
+# wrong constant name subscribe
+# wrong constant name unsubscribe
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <static-init>
 # wrong constant name aliased_table_for
 # wrong constant name aliases
 # wrong constant name initialize
@@ -1087,52 +1407,8 @@
 # wrong constant name object_class=
 # wrong constant name <static-init>
 # uninitialized constant ActiveRecord::ConnectionAdapters::AbstractAdapter::CALLBACK_FILTER_TYPES
-# wrong constant name ==
-# wrong constant name attributes_for_hash
-# wrong constant name bigint?
-# wrong constant name collation
-# wrong constant name comment
-# wrong constant name default
-# wrong constant name default_function
-# wrong constant name encode_with
-# wrong constant name eql?
-# wrong constant name has_default?
-# wrong constant name human_name
-# wrong constant name init_with
-# wrong constant name initialize
-# wrong constant name limit
-# wrong constant name name
-# wrong constant name null
-# wrong constant name precision
-# wrong constant name scale
-# wrong constant name sql_type
-# wrong constant name sql_type_metadata
-# wrong constant name table_name
-# wrong constant name type
-# wrong constant name <static-init>
 # uninitialized constant ActiveRecord::ConnectionAdapters::SQLite3Adapter::CALLBACK_FILTER_TYPES
 # uninitialized constant ActiveRecord::ConnectionAdapters::SQLite3Adapter::SIMPLE_INT
-# uninitialized constant ActiveRecord::InternalMetadata::ACTIONS
-# uninitialized constant ActiveRecord::InternalMetadata::BLACKLISTED_CLASS_METHODS
-# uninitialized constant ActiveRecord::InternalMetadata::CALLBACKS
-# uninitialized constant ActiveRecord::InternalMetadata::CALLBACK_FILTER_TYPES
-# uninitialized constant ActiveRecord::InternalMetadata::CALL_COMPILABLE_REGEXP
-# wrong constant name <Class:GeneratedAssociationMethods>
-# uninitialized constant ActiveRecord::InternalMetadata::MAX_PASSWORD_LENGTH_ALLOWED
-# uninitialized constant ActiveRecord::InternalMetadata::NAME_COMPILABLE_REGEXP
-# uninitialized constant ActiveRecord::InternalMetadata::UNASSIGNABLE_KEYS
-# wrong constant name <static-init>
-# wrong constant name []
-# wrong constant name []=
-# wrong constant name create_table
-# wrong constant name <Class:Rails41>
-# wrong constant name <Class:Rails420>
-# wrong constant name <static-init>
-# wrong constant name convert
-# wrong constant name <static-init>
-# wrong constant name convert
-# wrong constant name <static-init>
-# wrong constant name convert
 # uninitialized constant ActiveRecord::LogSubscriber::BLACK
 # uninitialized constant ActiveRecord::LogSubscriber::BLUE
 # uninitialized constant ActiveRecord::LogSubscriber::BOLD
@@ -1203,36 +1479,6 @@
 # wrong constant name invert_transaction
 # wrong constant name <static-init>
 # wrong constant name <static-init>
-# uninitialized constant ActiveRecord::Migration::Compatibility::V4_2::MigrationFilenameRegexp
-# wrong constant name <Class:TableDefinition>
-# wrong constant name add_belongs_to
-# wrong constant name add_reference
-# wrong constant name add_timestamps
-# wrong constant name index_exists?
-# wrong constant name remove_index
-# wrong constant name belongs_to
-# wrong constant name references
-# wrong constant name timestamps
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# uninitialized constant ActiveRecord::Migration::Compatibility::V5_0::MigrationFilenameRegexp
-# wrong constant name <Class:TableDefinition>
-# wrong constant name add_belongs_to
-# wrong constant name add_column
-# wrong constant name add_reference
-# wrong constant name change_table
-# wrong constant name create_join_table
-# wrong constant name belongs_to
-# wrong constant name primary_key
-# wrong constant name references
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# uninitialized constant ActiveRecord::Migration::Compatibility::V5_1::MigrationFilenameRegexp
-# wrong constant name change_column
-# wrong constant name create_table
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name find
 # wrong constant name any?
 # wrong constant name calculate
 # wrong constant name delete
@@ -1247,57 +1493,6 @@
 # wrong constant name to_sql
 # wrong constant name update_all
 # wrong constant name <static-init>
-# wrong constant name <Class:ArrayHandler>
-# wrong constant name <Class:AssociationQueryValue>
-# wrong constant name <Class:BaseHandler>
-# wrong constant name <Class:BasicObjectHandler>
-# wrong constant name <Class:PolymorphicArrayValue>
-# wrong constant name <Class:RangeHandler>
-# wrong constant name <Class:RelationHandler>
-# wrong constant name build
-# wrong constant name build_bind_attribute
-# wrong constant name build_from_hash
-# wrong constant name expand_from_hash
-# wrong constant name initialize
-# wrong constant name register_handler
-# wrong constant name resolve_column_aliases
-# wrong constant name table
-# wrong constant name <Class:NullPredicate>
-# wrong constant name call
-# wrong constant name initialize
-# wrong constant name predicate_builder
-# wrong constant name <static-init>
-# wrong constant name or
-# wrong constant name <static-init>
-# wrong constant name associated_table
-# wrong constant name initialize
-# wrong constant name queries
-# wrong constant name value
-# wrong constant name <static-init>
-# wrong constant name call
-# wrong constant name initialize
-# wrong constant name predicate_builder
-# wrong constant name <static-init>
-# wrong constant name call
-# wrong constant name initialize
-# wrong constant name predicate_builder
-# wrong constant name <static-init>
-# wrong constant name associated_table
-# wrong constant name initialize
-# wrong constant name queries
-# wrong constant name values
-# wrong constant name <static-init>
-# wrong constant name <Class:RangeWithBinds>
-# wrong constant name call
-# wrong constant name initialize
-# wrong constant name predicate_builder
-# wrong constant name exclude_end?
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name call
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name references
 # uninitialized constant ActiveRecord::Relation::DEFAULT_VALUES
 # uninitialized constant ActiveRecord::Relation::FROZEN_EMPTY_ARRAY
 # uninitialized constant ActiveRecord::Relation::FROZEN_EMPTY_HASH
@@ -1306,52 +1501,7 @@
 # uninitialized constant ActiveRecord::Relation::STRUCTURAL_OR_METHODS
 # uninitialized constant ActiveRecord::Relation::VALID_DIRECTIONS
 # uninitialized constant ActiveRecord::Relation::VALID_UNSCOPING_VALUES
-# uninitialized constant ActiveRecord::Schema::MigrationFilenameRegexp
-# wrong constant name define
-# wrong constant name <Class:BindMap>
-# wrong constant name <Class:Params>
-# wrong constant name <Class:PartialQuery>
-# wrong constant name <Class:Query>
-# wrong constant name <Class:Substitute>
-# wrong constant name bind_map
-# wrong constant name execute
-# wrong constant name initialize
-# wrong constant name klass
-# wrong constant name query_builder
-# wrong constant name bind
-# wrong constant name initialize
-# wrong constant name <static-init>
-# wrong constant name bind
-# wrong constant name <static-init>
-# wrong constant name initialize
-# wrong constant name <static-init>
-# wrong constant name initialize
-# wrong constant name sql_for
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name create
-# wrong constant name partial_query
-# wrong constant name query
-# wrong constant name unsupported_value?
-# wrong constant name aggregated_with?
-# wrong constant name arel_attribute
-# wrong constant name arel_table
-# wrong constant name associated_table
-# wrong constant name associated_with?
-# wrong constant name association
-# wrong constant name association_foreign_key
-# wrong constant name association_foreign_type
-# wrong constant name association_join_foreign_key
-# wrong constant name association_join_primary_key
-# wrong constant name has_column?
-# wrong constant name initialize
-# wrong constant name klass
-# wrong constant name polymorphic_association?
-# wrong constant name reflect_on_aggregation
-# wrong constant name resolve_column_aliases
-# wrong constant name type
-# wrong constant name <static-init>
+# wrong constant name suppressed
 # wrong constant name charset
 # wrong constant name charset_current
 # wrong constant name check_protected_environments!
@@ -1730,6 +1880,16 @@
 # wrong constant name local_variable_set
 # wrong constant name receiver
 # wrong constant name source_location
+# uninitialized constant Book::ACTIONS
+# uninitialized constant Book::BLACKLISTED_CLASS_METHODS
+# uninitialized constant Book::CALLBACKS
+# uninitialized constant Book::CALLBACK_FILTER_TYPES
+# uninitialized constant Book::CALL_COMPILABLE_REGEXP
+# wrong constant name <Class:GeneratedAssociationMethods>
+# uninitialized constant Book::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant Book::NAME_COMPILABLE_REGEXP
+# uninitialized constant Book::UNASSIGNABLE_KEYS
+# wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name environment
@@ -2730,7 +2890,6 @@
 # wrong constant name basename$1
 # wrong constant name chmod$1
 # wrong constant name chown$1
-# wrong constant name empty?
 # wrong constant name exists?
 # wrong constant name expand_path$1
 # wrong constant name fnmatch$1
@@ -2739,6 +2898,7 @@
 # wrong constant name lchown$1
 # wrong constant name lutime
 # wrong constant name mkfifo
+# wrong constant name probe_stat_in
 # wrong constant name realdirpath$1
 # wrong constant name realpath$1
 # wrong constant name umask$1

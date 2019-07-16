@@ -747,6 +747,12 @@ end
 class ActiveRecord::ExplainRegistry
   def self.collect?(*args, &block); end
 end
+class ActiveRecord::Scoping::ScopeRegistry
+  def self.value_for(*args, &block); end
+end
+class ActiveRecord::SchemaMigration < ActiveRecord::Base
+  def self.default_scope_override; end
+end
 module ActiveSupport
 end
 class ActiveSupport::TestCase < Minitest::Test

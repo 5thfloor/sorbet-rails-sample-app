@@ -3661,6 +3661,125 @@ class ActiveRecord::Result
   def to_hash; end
   include Enumerable
 end
+class ActiveRecord::PredicateBuilder
+  def associated_predicate_builder(association_name); end
+  def build(attribute, value); end
+  def build_bind_attribute(column_name, value); end
+  def build_from_hash(attributes); end
+  def convert_dot_notation_to_hash(attributes); end
+  def expand_from_hash(attributes); end
+  def handler_for(object); end
+  def initialize(table); end
+  def register_handler(klass, handler); end
+  def resolve_column_aliases(*args, &block); end
+  def self.references(attributes); end
+  def table; end
+end
+class ActiveRecord::PredicateBuilder::ArrayHandler
+  def call(attribute, value); end
+  def initialize(predicate_builder); end
+  def predicate_builder; end
+end
+module ActiveRecord::PredicateBuilder::ArrayHandler::NullPredicate
+  def self.or(other); end
+end
+class ActiveRecord::PredicateBuilder::BaseHandler
+  def call(attribute, value); end
+  def initialize(predicate_builder); end
+  def predicate_builder; end
+end
+class ActiveRecord::PredicateBuilder::BasicObjectHandler
+  def call(attribute, value); end
+  def initialize(predicate_builder); end
+  def predicate_builder; end
+end
+class ActiveRecord::PredicateBuilder::RangeHandler
+  def call(attribute, value); end
+  def initialize(predicate_builder); end
+  def predicate_builder; end
+end
+class Anonymous_Struct_17 < Struct
+  def begin; end
+  def begin=(_); end
+  def end; end
+  def end=(_); end
+  def self.[](*arg0); end
+  def self.inspect; end
+  def self.members; end
+  def self.new(*arg0); end
+end
+class ActiveRecord::PredicateBuilder::RangeHandler::RangeWithBinds < Anonymous_Struct_17
+  def exclude_end?; end
+end
+class ActiveRecord::PredicateBuilder::RelationHandler
+  def call(attribute, value); end
+end
+class ActiveRecord::PredicateBuilder::AssociationQueryValue
+  def associated_table; end
+  def convert_to_id(value); end
+  def ids; end
+  def initialize(associated_table, value); end
+  def primary_key; end
+  def queries; end
+  def value; end
+end
+class ActiveRecord::PredicateBuilder::PolymorphicArrayValue
+  def associated_table; end
+  def convert_to_id(value); end
+  def initialize(associated_table, values); end
+  def klass(value); end
+  def primary_key(value); end
+  def queries; end
+  def type_to_ids_mapping; end
+  def values; end
+end
+class ActiveRecord::TableMetadata
+  def aggregated_with?(aggregation_name); end
+  def arel_attribute(column_name); end
+  def arel_table; end
+  def associated_table(table_name); end
+  def associated_with?(association_name); end
+  def association; end
+  def association_foreign_key(*args, &block); end
+  def association_foreign_type(*args, &block); end
+  def association_join_foreign_key(*args, &block); end
+  def association_join_primary_key(*args, &block); end
+  def has_column?(column_name); end
+  def initialize(klass, arel_table, association = nil); end
+  def klass; end
+  def polymorphic_association?; end
+  def reflect_on_aggregation(aggregation_name); end
+  def resolve_column_aliases(hash); end
+  def type(column_name); end
+end
+class ActiveRecord::ConnectionAdapters::Column
+  def ==(other); end
+  def attributes_for_hash; end
+  def bigint?; end
+  def collation; end
+  def comment; end
+  def default; end
+  def default_function; end
+  def encode_with(coder); end
+  def eql?(other); end
+  def has_default?; end
+  def hash; end
+  def human_name; end
+  def init_with(coder); end
+  def initialize(name, default, sql_type_metadata = nil, null = nil, table_name = nil, default_function = nil, collation = nil, comment: nil, **arg8); end
+  def limit(*args, &block); end
+  def name; end
+  def null; end
+  def precision(*args, &block); end
+  def scale(*args, &block); end
+  def sql_type(*args, &block); end
+  def sql_type_metadata; end
+  def table_name; end
+  def type(*args, &block); end
+end
+class ActiveRecord::ConnectionAdapters::NullColumn < ActiveRecord::ConnectionAdapters::Column
+  def initialize(name); end
+end
 class ActiveRecord::FixtureSet
   def [](x); end
   def []=(k, v); end
@@ -3769,4 +3888,117 @@ module ActiveRecord::TestFixtures::ClassMethods
 end
 class ActiveRecord::FixtureSet::RenderContext
   def self.create_subclass; end
+end
+class ActiveRecord::Schema < ActiveRecord::Migration::Current
+  def define(info, &block); end
+  def migrations_paths; end
+  def self.define(info = nil, &block); end
+end
+module Anonymous_ActiveRecord_AttributeMethods_GeneratedAttributeMethods_18
+end
+class ActiveRecord::InternalMetadata < ActiveRecord::Base
+  def self.[](key); end
+  def self.[]=(key, value); end
+  def self._validators; end
+  def self.attribute_type_decorations; end
+  def self.create_table; end
+  def self.defined_enums; end
+  def self.primary_key; end
+  def self.table_exists?; end
+  def self.table_name; end
+  include ActiveRecord::InternalMetadata::GeneratedAssociationMethods
+  include Anonymous_ActiveRecord_AttributeMethods_GeneratedAttributeMethods_18
+end
+module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
+end
+class ActiveRecord::InternalMetadata::ActiveRecord_Relation < ActiveRecord::Relation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  include ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+module ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+class ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy < ActiveRecord::Associations::CollectionProxy
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  include ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+class ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation < ActiveRecord::AssociationRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  include ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+class ActiveRecord::StatementCache
+  def bind_map; end
+  def execute(params, connection, &block); end
+  def initialize(query_builder, bind_map, klass); end
+  def klass; end
+  def query_builder; end
+  def self.create(connection, block = nil); end
+  def self.partial_query(values); end
+  def self.query(sql); end
+  def self.unsupported_value?(value); end
+end
+class ActiveRecord::StatementCache::Substitute
+end
+class ActiveRecord::StatementCache::Query
+  def initialize(sql); end
+  def sql_for(binds, connection); end
+end
+class ActiveRecord::StatementCache::PartialQuery < ActiveRecord::StatementCache::Query
+  def initialize(values); end
+  def sql_for(binds, connection); end
+end
+class ActiveRecord::StatementCache::Params
+  def bind; end
+end
+class ActiveRecord::StatementCache::BindMap
+  def bind(values); end
+  def initialize(bound_attributes); end
+end
+module ActiveRecord::LegacyYamlAdapter
+  def self.convert(klass, coder); end
+end
+module ActiveRecord::LegacyYamlAdapter::Rails420
+  def self.convert(klass, coder); end
+end
+module ActiveRecord::LegacyYamlAdapter::Rails41
+  def self.convert(klass, coder); end
+end
+module ActiveRecord::Migration::Compatibility
+  def self.find(version); end
+end
+class ActiveRecord::Migration::Compatibility::V5_1 < ActiveRecord::Migration::Current
+  def change_column(table_name, column_name, type, options = nil); end
+  def create_table(table_name, options = nil); end
+end
+class ActiveRecord::Migration::Compatibility::V5_0 < ActiveRecord::Migration::Compatibility::V5_1
+  def add_belongs_to(table_name, ref_name, **options); end
+  def add_column(table_name, column_name, type, options = nil); end
+  def add_reference(table_name, ref_name, **options); end
+  def change_table(table_name, options = nil); end
+  def compatible_table_definition(t); end
+  def create_join_table(table_1, table_2, column_options: nil, **options); end
+  def create_table(table_name, options = nil); end
+end
+module ActiveRecord::Migration::Compatibility::V5_0::TableDefinition
+  def belongs_to(*args, **options); end
+  def primary_key(name, type = nil, **options); end
+  def references(*args, **options); end
+end
+class ActiveRecord::Migration::Compatibility::V4_2 < ActiveRecord::Migration::Compatibility::V5_0
+  def add_belongs_to(*arg0, **options); end
+  def add_reference(*arg0, **options); end
+  def add_timestamps(_, **options); end
+  def change_table(table_name, options = nil); end
+  def compatible_table_definition(t); end
+  def create_table(table_name, options = nil); end
+  def index_exists?(table_name, column_name, options = nil); end
+  def index_name_for_remove(table_name, options = nil); end
+  def remove_index(table_name, options = nil); end
+end
+module ActiveRecord::Migration::Compatibility::V4_2::TableDefinition
+  def belongs_to(*arg0, **options); end
+  def references(*arg0, **options); end
+  def timestamps(**options); end
 end

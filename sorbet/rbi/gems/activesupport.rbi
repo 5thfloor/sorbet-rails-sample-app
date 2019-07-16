@@ -1919,6 +1919,58 @@ class ActiveSupport::Cache::Entry
   def value; end
   def version; end
 end
+module ActiveSupport::TaggedLogging
+  def clear_tags!(*args, &block); end
+  def flush; end
+  def pop_tags(*args, &block); end
+  def push_tags(*args, &block); end
+  def self.new(logger); end
+  def tagged(*tags); end
+end
+module ActiveSupport::TaggedLogging::Formatter
+  def call(severity, timestamp, progname, msg); end
+  def clear_tags!; end
+  def current_tags; end
+  def pop_tags(size = nil); end
+  def push_tags(*tags); end
+  def tagged(*tags); end
+  def tags_text; end
+end
+module ActiveSupport::Configurable
+  def config; end
+  extend ActiveSupport::Concern
+end
+class ActiveSupport::Configurable::Configuration < ActiveSupport::InheritableOptions
+  def compile_methods!; end
+  def self.compile_methods!(keys); end
+end
+module ActiveSupport::Configurable::ClassMethods
+  def config; end
+  def config_accessor(*names); end
+  def configure; end
+end
+class ActiveSupport::Subscriber
+  def self.add_event_subscriber(event); end
+  def self.attach_to(namespace, subscriber = nil, notifier = nil); end
+  def self.method_added(event); end
+  def self.namespace; end
+  def self.notifier; end
+  def self.subscriber; end
+  def self.subscribers; end
+end
+class ActiveSupport::SubscriberQueueRegistry
+  def get_queue(queue_key); end
+  def initialize; end
+  extend ActiveSupport::PerThreadRegistry
+end
+class ActiveSupport::LogSubscriber < ActiveSupport::Subscriber
+  def self.colorize_logging; end
+  def self.colorize_logging=(obj); end
+  def self.flush_all!; end
+  def self.log_subscribers; end
+  def self.logger; end
+  def self.logger=(arg0); end
+end
 class ActiveSupport::ExecutionWrapper
   def __callbacks; end
   def __callbacks?; end
@@ -2031,7 +2083,7 @@ module ActiveSupport::NumericWithFormat
 end
 class File < IO
   def self.atomic_write(file_name, temp_dir = nil); end
-  def self.probe_stat_in(dir); end
+  def self.empty?(arg0); end
 end
 module ActiveSupport::RangeWithFormat
   def to_default_s(format = nil); end
@@ -2056,23 +2108,6 @@ module ActiveSupport::MarshalWithAutoloading
 end
 module SecureRandom
   def self.base58(n = nil); end
-end
-module ActiveSupport::TaggedLogging
-  def clear_tags!(*args, &block); end
-  def flush; end
-  def pop_tags(*args, &block); end
-  def push_tags(*args, &block); end
-  def self.new(logger); end
-  def tagged(*tags); end
-end
-module ActiveSupport::TaggedLogging::Formatter
-  def call(severity, timestamp, progname, msg); end
-  def clear_tags!; end
-  def current_tags; end
-  def pop_tags(size = nil); end
-  def push_tags(*tags); end
-  def tagged(*tags); end
-  def tags_text; end
 end
 module ActiveSupport::Cache::Strategy::LocalCache
   def bypass_local_cache; end
@@ -2126,28 +2161,6 @@ class ActiveSupport::Cache::Strategy::LocalCache::Middleware
   def name; end
   def new(app); end
 end
-class ActiveSupport::Subscriber
-  def self.add_event_subscriber(event); end
-  def self.attach_to(namespace, subscriber = nil, notifier = nil); end
-  def self.method_added(event); end
-  def self.namespace; end
-  def self.notifier; end
-  def self.subscriber; end
-  def self.subscribers; end
-end
-class ActiveSupport::SubscriberQueueRegistry
-  def get_queue(queue_key); end
-  def initialize; end
-  extend ActiveSupport::PerThreadRegistry
-end
-class ActiveSupport::LogSubscriber < ActiveSupport::Subscriber
-  def self.colorize_logging; end
-  def self.colorize_logging=(obj); end
-  def self.flush_all!; end
-  def self.log_subscribers; end
-  def self.logger; end
-  def self.logger=(arg0); end
-end
 class ActiveSupport::Cache::MemoryStore < ActiveSupport::Cache::Store
   def cached_size(key, entry); end
   def cleanup(options = nil); end
@@ -2169,19 +2182,6 @@ class ActiveSupport::Digest
   def self.hash_digest_class; end
   def self.hash_digest_class=(klass); end
   def self.hexdigest(arg); end
-end
-module ActiveSupport::Configurable
-  def config; end
-  extend ActiveSupport::Concern
-end
-class ActiveSupport::Configurable::Configuration < ActiveSupport::InheritableOptions
-  def compile_methods!; end
-  def self.compile_methods!(keys); end
-end
-module ActiveSupport::Configurable::ClassMethods
-  def config; end
-  def config_accessor(*names); end
-  def configure; end
 end
 module ActiveSupport::Testing
 end
