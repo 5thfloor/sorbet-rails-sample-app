@@ -1,24 +1,13 @@
-# README
+# sorbet-rails-sample-app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Sorbet](https://sorbet.org/)を使って型チェックを導入したRailsのサンプルアプリケーションです。
 
-Things you may want to cover:
+詳しくは以下のブログ記事を参照してください。
 
-* Ruby version
+TODO: ここにブログ記事のURLを貼る。
 
-* System dependencies
+## 構成
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Sorbet 0.4.4439
+* Rails 5.2.3
+* sorbet-rails 0.4.0
